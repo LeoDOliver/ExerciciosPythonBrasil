@@ -23,3 +23,32 @@ elif num > 0:
     print("Número positivo")
 else:
     print("O número digitado é 0, ou seja, nulo.")
+
+#03 - Exercício 03
+
+#Faça um programa que verifique se uma letra digitada é "F" ou "M". Conforme a letra escrever:
+
+#    F - Feminino
+#    M - Masculino
+#    Sexo Inválido.
+
+sexo = input("Digite o sexo:")
+
+if sexo.upper == "F":
+  print("F - Feminino")
+elif sexo.upper == "M":
+  print("M - Masculino")
+else:
+  print("Sexo Inválido.")
+
+
+#Exercício 04 - Faça um programa que verifique se uma letra digitada é vogal ou consoante.
+
+letra = input("Digite uma letra: ")
+
+if letra.lower in "aeiou":
+  print("Vogal")
+else:
+  print("Consoante")
+
+
