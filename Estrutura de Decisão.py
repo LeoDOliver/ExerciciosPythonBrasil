@@ -34,7 +34,7 @@ else:
 
 sexo = input("Digite o sexo:")
 
-if sexo.upper == "F":
+if sexo.upper() == "F":
   print("F - Feminino")
 elif sexo.upper == "M":
   print("M - Masculino")
@@ -46,7 +46,7 @@ else:
 
 letra = input("Digite uma letra: ")
 
-if letra.lower in "aeiou":
+if letra.lower() in "aeiou":
   print("Vogal")
 else:
   print("Consoante")
