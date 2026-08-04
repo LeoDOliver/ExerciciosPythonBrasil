@@ -96,3 +96,30 @@ else:
         print(f"Os dois últimos números são iguais e maior que {num1}")
     else:
         print("Os números informados são iguais.")
+
+
+#Exercício 07 - Faça um programa que leia três números e mostre o maior e o menor deles:
+
+num1 = int(input("Digite o primeiro número: "))
+num2 = int(input("Digite o segundo número: "))
+num3 = int(input("Digite o terceiro número: "))
+
+if num1 > num2 and num1 > num3:
+  print(f"{num1} é o maior")
+  if num2 > num3:
+    print(f"{num3} é o menor")
+  else:
+    print(f"{num2} é o menor")
+elif num2 > num1 and num2 > num3:
+  print(f"{num2} é o maior")
+  if num1 > num3:
+    print(f"{num3} é o menor")
+  else:
+    print(f"{num1} é o menor")
+elif num3 > num1 and num3 > num2:
+  print(f"{num3} é o maior")
+  if num1 > num2:
+    print(f"{num2} é o menor")
+  else:
+    print(f"{num1} é o menor")
+  
