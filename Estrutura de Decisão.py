@@ -122,4 +122,36 @@ elif num3 > num1 and num3 > num2:
     print(f"{num2} é o menor")
   else:
     print(f"{num1} é o menor")
-  
+
+
+#Exercício 08 - Faça um programa que pergunte o preço de três produtos e informe qual produto você deve comprar, sabendo que a decisão é sempre pelo mais barato:
+
+prod1 = float(input("Digite o preço do primeiro produto: "))
+prod2 = float(input("Digite o preço do segundo produto: "))
+prod3 = float(input("Digite o preço do terceiro produto: "))
+
+if prod1 == prod2 and prod1 == prod3:
+  print("Os três produtos tem preços iguais"))
+elif prod1 < prod2 and prod1 < prod3:
+  print("O primeiro produto é o mais barato")
+elif prod2 < prod1 and prod2 < prod3:
+  print("O segundo produto é o mais barato")
+elif prod3 < prod1 and prod3 < prod2:
+  print("O terceiro produto é o mais barato")
+else:
+  if prod1 == prod2:
+    if prod1 < prod3:
+      print("O primeiro e o segundo produtos tem o mesmo preço e ambos são mais barato que o terceiro produto.")
+    else:
+      print("O terceiro produto é o mais barato")
+  elif prod1 == prod3:
+    if prod1 < prod2:
+      print("O primeiro e o terceiro produtos tem o mesmo preço e ambos são mais barato que o segundo produto.")
+    else:
+      print("O segundo produto é o mais barato")
+  else:
+    if prod2 < prod1:
+      print("O segundo e terceiro produto são mais baratos que o primeiro produto")
+    else:
+      print("O primeiro produto é mais barato")
+    
