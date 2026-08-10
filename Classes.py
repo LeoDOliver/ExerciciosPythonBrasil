@@ -57,3 +57,45 @@ Quadrado1.retornar_lado()
 novo_lado = int(input("Digite o novo valor do lado: "))
 Quadrado1.mudar_lado(novo_lado)
 Quadrado1.calcular_area()
+
+"""Exercício 03 - Crie uma classe que modele um retângulo:
+
+    Atributos: Lado_a, Lado_b (ou Comprimento e Largura, ou Base e Altura, a escolher)
+    Métodos: Mudar valor dos lados, Retornar valor dos lados, calcular Área e calcular Perímetro;
+
+Crie um programa que utilize esta classe. Ele deve pedir ao usuário que informe as medidades de um local. Depois, deve criar um objeto com as medidas e calcular a quantidade de pisos e de rodapés necessárias para o local."""
+
+"""Exercício 04 - Crie uma classe que modele uma pessoa:
+
+    Atributos: nome, idade, peso e altura
+    Métodos: Envelhercer, engordar, emagrecer, crescer. Obs: Por padrão, a cada ano que nossa pessoa envelhece, sendo a idade dela menor que 21 anos, ela deve crescer 0,5 cm.
+"""
+
+"""Exercício 05 - Crie uma classe para implementar uma conta corrente. 
+A classe deve possuir os seguintes atributos: número da conta, nome do correntista e saldo. 
+Os métodos são os seguintes: alterarNome, depósito e saque; No construtor, saldo é opcional, com valor default zero e os demais atributos são obrigatórios."""
+
+class ContaBancaria:
+    def __init__(self, n_conta, nome_correntista, saldo):
+        self.n_conta = n_conta
+        self.nome_correntista = nome_correntista
+        self.saldo = saldo
+
+    def alterarNome(self):
+        novo_nome = input("Digite o novo nome: ")
+        self.nome_correntista = novo_nome
+
+    def deposito(self):
+        valor = float(input("Digite o valor a ser depositado: "))
+        self.saldo += valor
+
+    def saque(self):
+        valor = float(input("Digite o valor a ser sacado: "))
+        self.saldo -= valor
+
+
+nome = input("Digite o seu nome: ")
+n_conta = input("Digite o número da sua conta: ")
+saldo = float(input("Digite o saldo da conta: "))
+
+Conta = ContaBancaria(n_conta, nome, saldo)
