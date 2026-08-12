@@ -155,3 +155,54 @@ else:
     else:
       print("O primeiro produto é mais barato")
     
+#Exercício 09 -Faça um programa que leia três números e mostre-os em ordem decrescente:
+
+"""Exercício 10
+
+Faça um programa que pergunte em que turno você estuda. Peça para digitar:
+
+    M - Matutino
+    V - Vespertino
+    N - Noturno.
+
+Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso."""
+
+turno = input("Em qual turno você estuda - \nM (Matutino)\nV (Vespertino)\nN (Noturno)\nDigite: ")
+
+if turno.upper() == "M":
+    print("Bom dia!")
+elif turno.upper() == "V":
+    print("Boa tarde!")
+elif turno.upper() == "N":
+    print("Boa noite!")
+else:
+    print("Valor Inválido!")
+
+"""As Organizações Tabajara resolveram dar um aumento de salário aos seus colaboradores e lhe contrataram para desenvolver o programa que calculará os reajustes. 
+Faça um programa que recebe o salário de um colaborador e o reajuste segundo o seguinte critério, baseado no salário atual:
+
+    salários até R$ 280,00 (incluindo) : aumento de 20%
+    salários entre R$ 280,00 e R$ 700,00 : aumento de 15%
+    salários entre R$ 700,00 e R$ 1500,00 : aumento de 10%
+    salários de R$ 1500,00 em diante : aumento de 5% Após o aumento ser realizado, informe na tela:
+    o salário antes do reajuste;
+    o percentual de aumento aplicado;
+    o valor do aumento;
+    o novo salário, após o aumento.
+"""
+salario_atual = float(input("Digite seu salário atual: "))
+
+if salario_atual <= 280 and salario_atual > 0:
+    novo_salario = salario_atual + (salario_atual*20)/100
+    print(f"Seu salário atual é R${salario_atual}, ele terá um reajuste de 20% ({(salario_atual*20)/100}) e seu novo salário passará a ser R${novo_salario}")
+elif salario_atual > 280 and salario_atual <= 700:
+    novo_salario = salario_atual + (salario_atual*15)/100
+    print(f"Seu salário atual é R${salario_atual}, ele terá um reajuste de 15% ({(salario_atual*15)/100}) e seu novo salário passará a ser R${novo_salario}")
+elif salario_atual > 700 and salario_atual <= 1500:
+    novo_salario = salario_atual + (salario_atual*10)/100
+    print(f"Seu salário atual é R${salario_atual}, ele terá um reajuste de 10% ({(salario_atual*10)/100}) e seu novo salário passará a ser R${novo_salario}")
+elif salario_atual > 1500:
+    novo_salario = salario_atual + (salario_atual*5)/100
+    print(f"Seu salário atual é R${salario_atual}, ele terá um reajuste de 05% ({(salario_atual*5)/100}) e seu novo salário passará a ser R${novo_salario}")
+else:
+    print("Valor inválido")
