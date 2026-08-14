@@ -178,7 +178,8 @@ elif turno.upper() == "N":
 else:
     print("Valor Inválido!")
 
-"""As Organizações Tabajara resolveram dar um aumento de salário aos seus colaboradores e lhe contrataram para desenvolver o programa que calculará os reajustes. 
+"""
+Exercício 11 - As Organizações Tabajara resolveram dar um aumento de salário aos seus colaboradores e lhe contrataram para desenvolver o programa que calculará os reajustes. 
 Faça um programa que recebe o salário de um colaborador e o reajuste segundo o seguinte critério, baseado no salário atual:
 
     salários até R$ 280,00 (incluindo) : aumento de 20%
@@ -206,3 +207,40 @@ elif salario_atual > 1500:
     print(f"Seu salário atual é R${salario_atual}, ele terá um reajuste de 05% ({(salario_atual*5)/100}) e seu novo salário passará a ser R${novo_salario}")
 else:
     print("Valor inválido")
+
+
+"""Exercício 12 - Faça um programa para o cálculo de uma folha de pagamento, sabendo que os descontos são do Imposto de Renda, que depende do salário bruto (conforme tabela abaixo) e 3% para o Sindicato e que o FGTS corresponde a 11% do Salário Bruto, mas não é descontado (é a empresa que deposita). O Salário Líquido corresponde ao Salário Bruto menos os descontos. O programa deverá pedir ao usuário o valor da sua hora e a quantidade de horas trabalhadas no mês.
+
+Desconto do IR: - Salário Bruto até 900 (inclusive) - isento - Salário Bruto até 1500 (inclusive) - desconto de 5% - Salário Bruto até 2500 (inclusive) - desconto de 10% - Salário Bruto acima de 2500 - desconto de 20%
+
+Imprima na tela as informações, dispostas conforme o exemplo abaixo. No exemplo o valor da hora é 5 e a quantidade de hora é 220.
+
+Salário Bruto: (5 * 220)        : R$ 1100,00
+(-) IR (5%)                     : R$   55,00
+(-) INSS ( 10%)                 : R$  110,00
+FGTS (11%)                      : R$  121,00
+Total de descontos              : R$  165,00
+Salário Liquido                 : R$  935,00
+"""
+
+valor_hora = float(input("Qual o valor da sua hora? "))
+hrs_trabalhadas = int(input("Quantas horas você trabalhou esse mês? "))
+
+salario_bruto = valor_hora * hrs_trabalhadas
+
+if salario_bruto <= 900:
+    desconto =  (salario_bruto * 10)/100
+    salario_liq = salario_bruto - desconto
+    print(f"Salário Bruto: ({valor_hora} * {hrs_trabalhadas})        : R$ {salario_bruto}\n(-) IR (isento)                     : R$   0,00\n(-) INSS ( 10%)                 : R$  {desconto}\nFGTS (11%)                      : R$  {(salario_bruto*11)/100}\nTotal de descontos              : R$  {desconto}\nSalário Liquido                 : R$  {salario_liq}")
+elif salario_bruto > 900 and salario_bruto <= 1500:
+    desconto = (salario_bruto*5)/100 + (salario_bruto * 10)/100
+    salario_liq = salario_bruto - desconto
+    print(f"Salário Bruto: ({valor_hora} * {hrs_trabalhadas})        : R$ {salario_bruto}\n(-) IR (5%)                     : R$   {(salario_bruto*5)/100}\n(-) INSS ( 10%)                 : R$  {(salario_bruto*10)/100}\nFGTS (11%)                      : R$  {(salario_bruto*11)/100}\nTotal de descontos              : R$  {desconto}\nSalário Liquido                 : R$  {salario_liq}")
+elif salario_bruto > 1500 and salario_bruto <= 2500:
+    desconto =(salario_bruto * 10)/100
+    salario_liq = salario_bruto - (2 * desconto)
+    print(f"Salário Bruto: ({valor_hora} * {hrs_trabalhadas})        : R$ {salario_bruto}\n(-) IR (10%)                     : R$   {(salario_bruto*10)/100}\n(-) INSS ( 10%)                 : R$  {(salario_bruto*10)/100}\nFGTS (11%)                      : R$  {(salario_bruto*11)/100}\nTotal de descontos              : R$  {2*desconto}\nSalário Liquido                 : R$  {salario_liq}")
+else:
+    desconto = (salario_bruto*20)/100 + (salario_bruto * 10)/100
+    salario_liq = salario_bruto - desconto
+    print(f"Salário Bruto: ({valor_hora} * {hrs_trabalhadas})        : R$ {salario_bruto}\n(-) IR (20%)                     : R$   {(salario_bruto*10)/100}\n(-) INSS ( 10%)                 : R$  {(salario_bruto*10)/100}\nFGTS (11%)                      : R$  {(salario_bruto*11)/100}\nTotal de descontos              : R$  {desconto}\nSalário Liquido                 : R$  {salario_liq}")
