@@ -25,4 +25,5 @@ while True:
         username = input("Digite o nome de usuário: ")
         senha =  input("Digite a senha: ")
     else:
+        print("Credencais aceitas")
         break
