@@ -18,13 +18,13 @@ class Bola:
         print(f"A cor da bola é {self.cor}")
 
 
-Bola1 = Bola("verde", 3.0, "Borracha")
+bola1 = Bola("verde", 3.0, "Borracha")
 
-Bola1.mostra_cor()
+bola1.mostra_cor()
 
 nova_cor = input("Digite a nova cor: ")
-Bola1.troca_cor(nova_cor)
-Bola1.mostra_cor()
+bola1.troca_cor(nova_cor)
+bola1.mostra_cor()
 
 """
 Exercício 02 - Crie uma classe que modele um quadrado:
@@ -50,13 +50,13 @@ class Quadrado:
         print(f"A area do quadrado é {self.area}")
 
 
-Quadrado1 = Quadrado(5)
-Quadrado1.calcular_area()
-Quadrado1.retornar_lado()
+quadrado1 = Quadrado(5)
+quadrado1.calcular_area()
+quadrado1.retornar_lado()
 
 novo_lado = int(input("Digite o novo valor do lado: "))
-Quadrado1.mudar_lado(novo_lado)
-Quadrado1.calcular_area()
+quadrado1.mudar_lado(novo_lado)
+quadrado1.calcular_area()
 
 """Exercício 03 - Crie uma classe que modele um retângulo:
 
@@ -98,9 +98,17 @@ nome = input("Digite o seu nome: ")
 n_conta = input("Digite o número da sua conta: ")
 saldo = float(input("Digite o saldo da conta: "))
 
-Conta = ContaBancaria(n_conta, nome, saldo)
+conta1 = ContaBancaria(n_conta, nome, saldo)
 
 """Exercício 06 - Faça um programa que simule um televisor criando-o como um objeto. 
 O usuário deve ser capaz de informar o número do canal e aumentar ou diminuir o volume. Certifique-se de que o número do canal e o nível do volume permanecem dentro de faixas válidas."""
+
+"""Exercício 07 - Crie uma classe que modele um Tamagushi (Bichinho Eletrônico):
+
+    Atributos: Nome, Fome, Saúde e Idade b.
+    Métodos: Alterar Nome, Fome, Saúde e Idade; Retornar Nome, Fome, Saúde e Idade
+
+Obs: Existe mais uma informação que devemos levar em consideração, o Humor do nosso tamagushi, este humor é uma combinação entre os atributos Fome e Saúde, ou seja, um campo calculado, 
+então não devemos criar um atributo para armazenar esta informação por que ela pode ser calculada a qualquer momento. """
 
 
