@@ -27,3 +27,40 @@ while True:
     else:
         print("Credencais aceitas")
         break
+
+"""Exercício 03 - Faça um programa que leia e valide as seguintes informações:
+
+    Nome: maior que 3 caracteres;
+    Idade: entre 0 e 150;
+    Salário: maior que zero;
+    Estado Civil: 's', 'c', 'v', 'd';
+"""
+
+nome = input("Digite o seu nome: ")
+idade = int(input("Digite sua idade: "))
+salario = float(input("Digite o seu salário: "))
+estado_civil = input("Digite seu estado civil - s, c, v ou d:")
+
+cont = True
+while True:
+    if len(nome) <= 3:
+        cont = False
+    
+    if idade < 0 or idade > 150:
+        cont = False
+    
+    if salario < 0:
+        cont =  False
+
+    if estado_civil not in 'scvd':
+        cont =  False
+
+    if cont == False:
+        print("Informações invalidas, redigite!)
+        nome = input("Digite o seu nome: ")
+        idade = int(input("Digite sua idade: "))
+        salario = float(input("Digite o seu salário: "))
+        estado_civil = input("Digite seu estado civil - s, c, v ou d:")
+        continue
+    else:
+        break
