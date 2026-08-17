@@ -244,3 +244,24 @@ else:
     desconto = (salario_bruto*20)/100 + (salario_bruto * 10)/100
     salario_liq = salario_bruto - desconto
     print(f"Salário Bruto: ({valor_hora} * {hrs_trabalhadas})        : R$ {salario_bruto}\n(-) IR (20%)                     : R$   {(salario_bruto*10)/100}\n(-) INSS ( 10%)                 : R$  {(salario_bruto*10)/100}\nFGTS (11%)                      : R$  {(salario_bruto*11)/100}\nTotal de descontos              : R$  {desconto}\nSalário Liquido                 : R$  {salario_liq}")
+
+"""Exercício 13 - Faça um programa que leia um número e exiba o dia correspondente da semana. (1-Domingo, 2- Segunda, etc.), se digitar outro valor deve aparecer valor inválido."""
+dia = int(input("Digite o número do dia da semana: "))
+
+if dia == 1:
+    print("Domingo")
+elif dia == 2:
+    print("Segunda-Feira")
+elif dia == 3:
+    print("Terça-feira")
+elif dia == 4:
+    print("Quarta-feira")
+elif dia == 5:
+    print("Quinta-feira")
+elif dia == 6:
+    print("Sexta-feira")
+elif dia == 7:
+    print("Sabado")
+else:
+    print("Valor invalido")
+  
