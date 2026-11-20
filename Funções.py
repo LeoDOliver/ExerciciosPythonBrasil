@@ -12,3 +12,6 @@ def impressaon(n):
   for i in range(1,n+1):
     aux = str(i) + " "
     print(aux * i)
+
+n = int(input("Digite n: "))
+impressaon(n)
