@@ -38,3 +38,18 @@ def impressao2(n):
 n = int(input("Digite n: "))
 impressao2(n)
 #Corrigir impressão
+
+
+"""Exercício 03
+Faça um programa, com uma função que necessite de três argumentos, e que forneça a soma desses três argumentos."""
+
+def soma(n1,n2,n3):
+  soma = n1 + n2 + n3
+  return soma
+
+n1 = int(input("Digite o primeiro número: "))
+n2 = int(input("Digite o segundo número: "))
+n3 = int(input("Digite o terceiro número: "))
+
+resultado = soma(n1,n2,n3)
+print(resultado)
