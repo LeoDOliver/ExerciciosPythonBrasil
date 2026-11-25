@@ -33,3 +33,18 @@ nome = input("Digite um nome: ")
 nome = nome[::-1]
 nome = nome.upper()
 print(nome)
+
+"""Exercício 03
+
+Nome na vertical. Faça um programa que solicite o nome do usuário e imprima-o na vertical.
+
+F
+U
+L
+A
+N
+O"""
+
+nome = input("Digite o nome: ")
+for letra in nome:
+  print(letra)
