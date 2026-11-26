@@ -48,3 +48,19 @@ O"""
 nome = input("Digite o nome: ")
 for letra in nome:
   print(letra)
+
+"""Exercício 04
+Nome na vertical em escada. Modifique o programa anterior de forma a mostrar o nome em formato de escada.
+
+F
+FU
+FUL
+FULA
+FULAN
+FULANO"""
+
+nome = input("Digite o nome: ")
+aux = ""
+for letra in nome:
+  aux += letra
+  print(aux)
