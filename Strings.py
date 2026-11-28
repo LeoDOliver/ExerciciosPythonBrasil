@@ -64,3 +64,21 @@ aux = ""
 for letra in nome:
   aux += letra
   print(aux)
+
+"""Exercício 05
+Nome na vertical em escada invertida. Altere o programa anterior de modo que a escada seja invertida.
+
+FULANO
+FULAN
+FULA
+FUL
+FU
+F"""
+
+nome = input("Digite o nome: ")
+aux = ""
+for letra in nome:
+  aux += letra
+  print(aux)
+
+#Consertar codigo
